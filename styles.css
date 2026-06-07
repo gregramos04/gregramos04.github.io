@@ -106,6 +106,12 @@ body {
     display: inline-block;
 }
 
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+}
+
 .btn-primary {
     background-color: #fff;
     color: #667eea;
@@ -136,6 +142,7 @@ body {
 
 .about h2,
 .skills h2,
+.projects h2,
 .services h2,
 .contact h2 {
     text-align: center;
@@ -250,6 +257,153 @@ body {
 .competency p {
     color: #666;
     font-size: 0.95rem;
+}
+
+/* Projects Section */
+.projects {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-content h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.project-type {
+    color: #667eea;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.project-description {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+    background: #f0f4ff;
+    color: #667eea;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #667eea;
+}
+
+.project-features {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #667eea;
+}
+
+.project-features h4 {
+    color: #333;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.project-features ul {
+    list-style: none;
+}
+
+.project-features li {
+    color: #555;
+    padding: 0.3rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.project-features li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.projects-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+}
+
+.stat-item h4 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    opacity: 0.9;
 }
 
 /* Services Section */
@@ -470,6 +624,7 @@ body {
 
     .about h2,
     .skills h2,
+    .projects h2,
     .services h2,
     .contact h2 {
         font-size: 1.8rem;
@@ -482,6 +637,10 @@ body {
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .footer .container {
@@ -511,5 +670,14 @@ body {
 
     .hero .subtitle {
         font-size: 0.9rem;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .btn-small {
+        width: 100%;
+        text-align: center;
     }
 }
